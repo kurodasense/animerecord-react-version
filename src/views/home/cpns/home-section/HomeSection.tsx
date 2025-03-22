@@ -3,7 +3,7 @@ import SectionWrapper from "./style";
 import { getAnimeRecordByDateId } from "../../../../service";
 import { IAnimeDate, IAnimeRecord } from "@/service/request/style";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import ImageComponent from "@/components/image-component";
 
 interface IHomeSectionProps {
   animeDate: IAnimeDate;
@@ -39,12 +39,7 @@ const HomeSection = memo(({ animeDate }: IHomeSectionProps) => {
           <BentoGridItem
             key={animerecord.record_id}
             title={animerecord.anime_name}
-            header={
-              <LazyLoadImage
-                src={animerecord.image_url}
-                className="max-h-45 w-full object-cover rounded-xl"
-              />
-            }
+            header={<ImageComponent src={animerecord.image_url} />}
             description={animerecord.watch_status}
           />
         ))}
