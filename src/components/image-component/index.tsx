@@ -12,7 +12,7 @@ const ImageComponent = memo(({ src }: IImageComponent) => {
     <>
       <LazyLoadImage
         src={src || defaultImage}
-        className="max-h-45 w-full object-cover rounded-xl cursor-pointer"
+        className="h-full w-full object-cover rounded-xl cursor-pointer mb-0"
         onClick={() => setVisible(true)}
       />
       <Viewer

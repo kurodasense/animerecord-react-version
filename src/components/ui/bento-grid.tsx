@@ -8,10 +8,8 @@ export const BentoGrid = ({
 }) => {
   return (
     <div
-      className={cn(
-        "mx-auto grid max-w-full grid-cols-1 gap-4 md:auto-rows-[18rem] xl:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]",
-        className
-      )}
+      className={cn("w-full h-fit grid gap-4 md:auto-rows-[18rem] justify-center", className)}
+      style={{ gridTemplateColumns: "repeat(auto-fit, 400px)" }}
     >
       {children}
     </div>
@@ -38,10 +36,13 @@ export const BentoGridItem = ({
         className
       )}
     >
-      {header}
-      <div className="transition duration-200 group-hover/bento:translate-x-2">
+      <div className="flex-3 max-h-[200px]">{header}</div>
+      <div className="transition duration-200 group-hover/bento:translate-x-2 flex-1">
         {icon}
-        <div className="mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 break-words max-w-300">
+        <div
+          className="font-sans font-bold text-neutral-600 dark:text-neutral-200 truncate"
+          title={title as string}
+        >
           {title}
         </div>
         <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">

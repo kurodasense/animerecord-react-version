@@ -34,7 +34,7 @@ const HomeSection = memo(({ animeDate }: IHomeSectionProps) => {
   return (
     <SectionWrapper>
       <h1>{newDateName}</h1>
-      <BentoGrid className="mx-8">
+      <BentoGrid>
         {animeRecords.map((animerecord) => (
           <BentoGridItem
             key={animerecord.record_id}
