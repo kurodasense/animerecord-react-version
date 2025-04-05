@@ -27,8 +27,8 @@ react-window 可以实现变长高度的 List 显示，但是更适合于指定�
 1. 通过 rowRefs 来保存每个 Row 的 dom 引用，并通过 rowHeights 来缓存每个 Row 的高度 。使用 requestAnimationFrame 确保每个 Row 在渲染后对其高度进行测量，如果高度与缓存不同，更新缓存并重置列表。
 2. 添加了一个 useWindowSize 来监听页面窗口大小，如果大小发生变化就重新渲染列表。
 
-优化前后，在 lighthouse 上的性能评分
+优化前后，在 lighthouse 上的性能评分，可见在性能上提升了很多：
 
-| ![image-20250405113641083](https://raw.githubusercontent.com/kurodasense/cloudimg/master/img/image-20250405113641083.png) | ![image-20250405113736790](https://raw.githubusercontent.com/kurodasense/cloudimg/master/img/image-20250405113736790.png) |
+| ![image-20250405113641083](https://raw.githubusercontent.com/kurodasense/cloudimg/master/img/image-20250405113641083.png) | ![image-20250405121907172](https://raw.githubusercontent.com/kurodasense/cloudimg/master/img/image-20250405121907172.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
