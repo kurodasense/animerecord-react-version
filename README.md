@@ -1,6 +1,6 @@
 # animerecord-react-version
 animerecord 的 react 版本。区别于以前用 vue 开发的版本，该版本主要以展示为主，并不包含所有的数据修改功能。因此，该版本只有一个主页面，并直接部署到 github page 上。
-该版本我的设想是直接展示有图片的 animerecord ，而不是像表格那样需要 hover 才能查看图片。网址：https://kurodasense.github.io/animerecord-react-version/。
+该版本我的设想是直接展示有图片的 animerecord ，而不是像表格那样需要 hover 才能查看图片。网址：https://kurodasense.github.io/animerecord-react-version/
 
 ## 样式和布局
 样式使用的是 Aceternity UI 的 BenoGrid ；布局使用 grid ，利用`grid-template-columns`的自适应划分每一列来实现在不同屏幕下的自适应。
